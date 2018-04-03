@@ -14,17 +14,18 @@ class PostsTableSeeder extends Seeder
     {
         //\App\Post::truncate();
         DB::table('posts')->truncate();
-        DB::table('comments')->truncate();
 
         $faker = Faker\Factory::create('en_EN');
         //$name = $faker->realText(100);
         //$content = $faker->sentence(100);
         //$file = $faker->file('http://lorempixel.com/800/600/cats/', , false);
+        $categoryIds = \App\Category::all()->pluck('id')->toArray();
 
         foreach (range(1, 12) as $index) {
             $post_id = DB::table('posts')->insertGetId(
                 [
-                    'name' => $faker->realText(70),
+                    'category_id' => array_rand($categoryIds),
+                    'name' => $faker->unique()->realText(70),
                     'content' => $faker->sentence(100),
                     //'file' => $faker->file('/resources/assets/files4seeding', '/resources/assets/uploadedFiles')
                 ]

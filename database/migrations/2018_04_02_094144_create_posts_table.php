@@ -17,7 +17,8 @@ class CreatePostsTable extends Migration
             'posts',
             function (Blueprint $table) {
                 $table->increments('id');
-                $table->string('name');
+                $table->bigInteger('category_id')->nullable();
+                $table->string('name')->unique();
                 $table->text('content');
                 $table->binary('file')->nullable();
                 //$table->timestamps();

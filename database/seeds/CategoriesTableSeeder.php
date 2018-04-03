@@ -14,6 +14,7 @@ class CategoriesTableSeeder extends Seeder
     {
         //\App\Post::truncate();
         DB::table('categories')->truncate();
+        DB::table('comments')->truncate();
 
         $faker = Faker\Factory::create('en_EN');
         //$name = $faker->realText(100);
@@ -22,7 +23,7 @@ class CategoriesTableSeeder extends Seeder
         foreach (range(1, 10) as $index) {
             $category_id = DB::table('categories')->insertGetId(
                 [
-                    'name' => $faker->word,
+                    'name' => $faker->unique()->word,
                     'description' => $faker->sentence(50),
                 ]
             );

@@ -11,7 +11,7 @@
         категорию</h2>
 
     <form action="/categories" method="POST" enctype="multipart/form-data">
-        <input type="" name="_token" value="{{ csrf_token() }}">
+        {{ csrf_field() }}
         <fieldset>
 
         @include('layouts.errors')

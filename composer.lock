@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-  "content-hash": "d740f4e045654f6afb448777cb4e2fbc",
+    "content-hash": "d740f4e045654f6afb448777cb4e2fbc",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -916,16 +916,16 @@
         },
         {
             "name": "paragonie/random_compat",
-          "version": "v2.0.12",
+            "version": "v2.0.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/paragonie/random_compat.git",
-              "reference": "258c89a6b97de7dfaf5b8c7607d0478e236b04fb"
+                "reference": "258c89a6b97de7dfaf5b8c7607d0478e236b04fb"
             },
             "dist": {
                 "type": "zip",
-              "url": "https://api.github.com/repos/paragonie/random_compat/zipball/258c89a6b97de7dfaf5b8c7607d0478e236b04fb",
-              "reference": "258c89a6b97de7dfaf5b8c7607d0478e236b04fb",
+                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/258c89a6b97de7dfaf5b8c7607d0478e236b04fb",
+                "reference": "258c89a6b97de7dfaf5b8c7607d0478e236b04fb",
                 "shasum": ""
             },
             "require": {
@@ -960,7 +960,7 @@
                 "pseudorandom",
                 "random"
             ],
-          "time": "2018-04-04T21:24:14+00:00"
+            "time": "2018-04-04T21:24:14+00:00"
         },
         {
             "name": "psr/container",
@@ -1259,47 +1259,47 @@
             "time": "2018-01-20T00:28:24+00:00"
         },
         {
-          "name": "risul/laravel-like-comment",
-          "version": "dev-noauth",
-          "source": {
-            "type": "git",
-            "url": "https://github.com/va2dim/laravel-like-comment.git",
-            "reference": "a7c1a975f468cfb28a7ad3d5de2efde7fe32d9a2"
-          },
-          "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/va2dim/laravel-like-comment/zipball/a7c1a975f468cfb28a7ad3d5de2efde7fe32d9a2",
-            "reference": "a7c1a975f468cfb28a7ad3d5de2efde7fe32d9a2",
-            "shasum": ""
-          },
-          "type": "library",
-          "autoload": {
-            "psr-4": {
-              "risul\\LaravelLikeComment\\": "src/"
-            }
-          },
-          "license": [
-            "MIT"
-          ],
-          "authors": [
-            {
-              "name": "risul",
-              "email": "risul321@gmail.com"
-            }
-          ],
-          "description": "Ajax based site wide like and comment system for laravel",
-          "keywords": [
-            "ajax",
-            "comment",
-            "laravel",
-            "like"
-          ],
-          "support": {
-            "source": "https://github.com/va2dim/laravel-like-comment/tree/master"
-          },
-          "time": "2018-04-04T07:25:17+00:00"
+            "name": "risul/laravel-like-comment",
+            "version": "dev-noauth",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/va2dim/laravel-like-comment.git",
+                "reference": "a7c1a975f468cfb28a7ad3d5de2efde7fe32d9a2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/va2dim/laravel-like-comment/zipball/a7c1a975f468cfb28a7ad3d5de2efde7fe32d9a2",
+                "reference": "a7c1a975f468cfb28a7ad3d5de2efde7fe32d9a2",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "risul\\LaravelLikeComment\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "risul",
+                    "email": "risul321@gmail.com"
+                }
+            ],
+            "description": "Ajax based site wide like and comment system for laravel",
+            "keywords": [
+                "ajax",
+                "comment",
+                "laravel",
+                "like"
+            ],
+            "support": {
+                "source": "https://github.com/va2dim/laravel-like-comment/tree/master"
+            },
+            "time": "2018-04-04T07:25:17+00:00"
         },
-      {
+        {
             "name": "swiftmailer/swiftmailer",
             "version": "v6.0.2",
             "source": {
@@ -1356,16 +1356,16 @@
         },
         {
             "name": "symfony/console",
-          "version": "v3.4.7",
+            "version": "v3.4.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-              "reference": "d4bb70fa24d540c309d88a9d6e43fb2d339b1fbf"
+                "reference": "d4bb70fa24d540c309d88a9d6e43fb2d339b1fbf"
             },
             "dist": {
                 "type": "zip",
-              "url": "https://api.github.com/repos/symfony/console/zipball/d4bb70fa24d540c309d88a9d6e43fb2d339b1fbf",
-              "reference": "d4bb70fa24d540c309d88a9d6e43fb2d339b1fbf",
+                "url": "https://api.github.com/repos/symfony/console/zipball/d4bb70fa24d540c309d88a9d6e43fb2d339b1fbf",
+                "reference": "d4bb70fa24d540c309d88a9d6e43fb2d339b1fbf",
                 "shasum": ""
             },
             "require": {
@@ -1421,20 +1421,20 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-          "time": "2018-04-03T05:22:50+00:00"
+            "time": "2018-04-03T05:22:50+00:00"
         },
         {
             "name": "symfony/css-selector",
-          "version": "v3.4.7",
+            "version": "v3.4.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/css-selector.git",
-              "reference": "519a80d7c1d95c6cc0b67f686d15fe27c6910de0"
+                "reference": "519a80d7c1d95c6cc0b67f686d15fe27c6910de0"
             },
             "dist": {
                 "type": "zip",
-              "url": "https://api.github.com/repos/symfony/css-selector/zipball/519a80d7c1d95c6cc0b67f686d15fe27c6910de0",
-              "reference": "519a80d7c1d95c6cc0b67f686d15fe27c6910de0",
+                "url": "https://api.github.com/repos/symfony/css-selector/zipball/519a80d7c1d95c6cc0b67f686d15fe27c6910de0",
+                "reference": "519a80d7c1d95c6cc0b67f686d15fe27c6910de0",
                 "shasum": ""
             },
             "require": {
@@ -1474,20 +1474,20 @@
             ],
             "description": "Symfony CssSelector Component",
             "homepage": "https://symfony.com",
-          "time": "2018-03-19T22:32:39+00:00"
+            "time": "2018-03-19T22:32:39+00:00"
         },
         {
             "name": "symfony/debug",
-          "version": "v3.4.7",
+            "version": "v3.4.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/debug.git",
-              "reference": "9cf7c2271cfb89ef9727db1b740ca77be57bf9d7"
+                "reference": "9cf7c2271cfb89ef9727db1b740ca77be57bf9d7"
             },
             "dist": {
                 "type": "zip",
-              "url": "https://api.github.com/repos/symfony/debug/zipball/9cf7c2271cfb89ef9727db1b740ca77be57bf9d7",
-              "reference": "9cf7c2271cfb89ef9727db1b740ca77be57bf9d7",
+                "url": "https://api.github.com/repos/symfony/debug/zipball/9cf7c2271cfb89ef9727db1b740ca77be57bf9d7",
+                "reference": "9cf7c2271cfb89ef9727db1b740ca77be57bf9d7",
                 "shasum": ""
             },
             "require": {
@@ -1530,11 +1530,11 @@
             ],
             "description": "Symfony Debug Component",
             "homepage": "https://symfony.com",
-          "time": "2018-04-03T05:22:50+00:00"
+            "time": "2018-04-03T05:22:50+00:00"
         },
         {
             "name": "symfony/event-dispatcher",
-          "version": "v3.4.7",
+            "version": "v3.4.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/event-dispatcher.git",
@@ -1597,16 +1597,16 @@
         },
         {
             "name": "symfony/finder",
-          "version": "v3.4.7",
+            "version": "v3.4.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
-              "reference": "7a2e1299cc0c4162996f18e347b6356729a55317"
+                "reference": "7a2e1299cc0c4162996f18e347b6356729a55317"
             },
             "dist": {
                 "type": "zip",
-              "url": "https://api.github.com/repos/symfony/finder/zipball/7a2e1299cc0c4162996f18e347b6356729a55317",
-              "reference": "7a2e1299cc0c4162996f18e347b6356729a55317",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/7a2e1299cc0c4162996f18e347b6356729a55317",
+                "reference": "7a2e1299cc0c4162996f18e347b6356729a55317",
                 "shasum": ""
             },
             "require": {
@@ -1642,20 +1642,20 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "https://symfony.com",
-          "time": "2018-03-28T18:23:39+00:00"
+            "time": "2018-03-28T18:23:39+00:00"
         },
         {
             "name": "symfony/http-foundation",
-          "version": "v3.4.7",
+            "version": "v3.4.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-foundation.git",
-              "reference": "b11e6d165ff4cbf5685d185ab19a90f2f3bb7d1e"
+                "reference": "b11e6d165ff4cbf5685d185ab19a90f2f3bb7d1e"
             },
             "dist": {
                 "type": "zip",
-              "url": "https://api.github.com/repos/symfony/http-foundation/zipball/b11e6d165ff4cbf5685d185ab19a90f2f3bb7d1e",
-              "reference": "b11e6d165ff4cbf5685d185ab19a90f2f3bb7d1e",
+                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/b11e6d165ff4cbf5685d185ab19a90f2f3bb7d1e",
+                "reference": "b11e6d165ff4cbf5685d185ab19a90f2f3bb7d1e",
                 "shasum": ""
             },
             "require": {
@@ -1696,20 +1696,20 @@
             ],
             "description": "Symfony HttpFoundation Component",
             "homepage": "https://symfony.com",
-          "time": "2018-04-03T05:22:50+00:00"
+            "time": "2018-04-03T05:22:50+00:00"
         },
         {
             "name": "symfony/http-kernel",
-          "version": "v3.4.7",
+            "version": "v3.4.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-kernel.git",
-              "reference": "43cfdad2ca1dba608662db0699c1bbb715d08191"
+                "reference": "43cfdad2ca1dba608662db0699c1bbb715d08191"
             },
             "dist": {
                 "type": "zip",
-              "url": "https://api.github.com/repos/symfony/http-kernel/zipball/43cfdad2ca1dba608662db0699c1bbb715d08191",
-              "reference": "43cfdad2ca1dba608662db0699c1bbb715d08191",
+                "url": "https://api.github.com/repos/symfony/http-kernel/zipball/43cfdad2ca1dba608662db0699c1bbb715d08191",
+                "reference": "43cfdad2ca1dba608662db0699c1bbb715d08191",
                 "shasum": ""
             },
             "require": {
@@ -1784,7 +1784,7 @@
             ],
             "description": "Symfony HttpKernel Component",
             "homepage": "https://symfony.com",
-          "time": "2018-04-03T05:49:44+00:00"
+            "time": "2018-04-03T05:49:44+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -1906,16 +1906,16 @@
         },
         {
             "name": "symfony/process",
-          "version": "v3.4.7",
+            "version": "v3.4.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
-              "reference": "4b7d64e852886319e93ddfdecff0d744ab87658b"
+                "reference": "4b7d64e852886319e93ddfdecff0d744ab87658b"
             },
             "dist": {
                 "type": "zip",
-              "url": "https://api.github.com/repos/symfony/process/zipball/4b7d64e852886319e93ddfdecff0d744ab87658b",
-              "reference": "4b7d64e852886319e93ddfdecff0d744ab87658b",
+                "url": "https://api.github.com/repos/symfony/process/zipball/4b7d64e852886319e93ddfdecff0d744ab87658b",
+                "reference": "4b7d64e852886319e93ddfdecff0d744ab87658b",
                 "shasum": ""
             },
             "require": {
@@ -1951,27 +1951,27 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "https://symfony.com",
-          "time": "2018-04-03T05:22:50+00:00"
+            "time": "2018-04-03T05:22:50+00:00"
         },
         {
             "name": "symfony/routing",
-          "version": "v3.4.7",
+            "version": "v3.4.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/routing.git",
-              "reference": "5f90733adbf19ea71468a5761fb8f5a043d424dd"
+                "reference": "5f90733adbf19ea71468a5761fb8f5a043d424dd"
             },
             "dist": {
                 "type": "zip",
-              "url": "https://api.github.com/repos/symfony/routing/zipball/5f90733adbf19ea71468a5761fb8f5a043d424dd",
-              "reference": "5f90733adbf19ea71468a5761fb8f5a043d424dd",
+                "url": "https://api.github.com/repos/symfony/routing/zipball/5f90733adbf19ea71468a5761fb8f5a043d424dd",
+                "reference": "5f90733adbf19ea71468a5761fb8f5a043d424dd",
                 "shasum": ""
             },
             "require": {
                 "php": "^5.5.9|>=7.0.8"
             },
             "conflict": {
-              "symfony/config": "<3.3.1",
+                "symfony/config": "<3.3.1",
                 "symfony/dependency-injection": "<3.3",
                 "symfony/yaml": "<3.4"
             },
@@ -1979,7 +1979,7 @@
                 "doctrine/annotations": "~1.0",
                 "doctrine/common": "~2.2",
                 "psr/log": "~1.0",
-              "symfony/config": "^3.3.1|~4.0",
+                "symfony/config": "^3.3.1|~4.0",
                 "symfony/dependency-injection": "~3.3|~4.0",
                 "symfony/expression-language": "~2.8|~3.0|~4.0",
                 "symfony/http-foundation": "~2.8|~3.0|~4.0",
@@ -2029,11 +2029,11 @@
                 "uri",
                 "url"
             ],
-          "time": "2018-03-23T08:14:09+00:00"
+            "time": "2018-03-23T08:14:09+00:00"
         },
         {
             "name": "symfony/translation",
-          "version": "v3.4.7",
+            "version": "v3.4.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/translation.git",
@@ -2101,16 +2101,16 @@
         },
         {
             "name": "symfony/var-dumper",
-          "version": "v3.4.7",
+            "version": "v3.4.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/var-dumper.git",
-              "reference": "6f502127b1bb85f7f30f8bc1fb60570a10431863"
+                "reference": "6f502127b1bb85f7f30f8bc1fb60570a10431863"
             },
             "dist": {
                 "type": "zip",
-              "url": "https://api.github.com/repos/symfony/var-dumper/zipball/6f502127b1bb85f7f30f8bc1fb60570a10431863",
-              "reference": "6f502127b1bb85f7f30f8bc1fb60570a10431863",
+                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/6f502127b1bb85f7f30f8bc1fb60570a10431863",
+                "reference": "6f502127b1bb85f7f30f8bc1fb60570a10431863",
                 "shasum": ""
             },
             "require": {
@@ -2166,7 +2166,7 @@
                 "debug",
                 "dump"
             ],
-          "time": "2018-04-03T05:22:50+00:00"
+            "time": "2018-04-03T05:22:50+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
@@ -3993,11 +3993,11 @@
         }
     ],
     "aliases": [],
-  "minimum-stability": "dev",
-  "stability-flags": {
-    "risul/laravel-like-comment": 20
-  },
-  "prefer-stable": true,
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "risul/laravel-like-comment": 20
+    },
+    "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
         "php": ">=7.0.0"

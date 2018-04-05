@@ -21,21 +21,18 @@ class CategoryController extends Controller
             request(),
             [
                 'name' => 'required',
-                'content' => 'required',
+                'description' => 'required',
             ]
         );
 
-        Category::updateOrCreate(
-            [
-                'id' => request('id'),
-            ],
-            [
+        Category::updateOrCreate([
+                'id' => request('id')
+            ], [
                 'name' => request('name'),
                 'description' => request('description'),
-            ]
-        );
+        ]);
 
-
+        $this->index();
     }
 
     public function show(Category $category)
@@ -49,11 +46,11 @@ class CategoryController extends Controller
         return view('categories.show', ['category' => $category]);
     }
 
-    public function update(Category $id)
+    public function update(Category $category)
     {
 
         //$category = Category::where('id', $id)->first();
 
-        return view('categories.update', ['category' => $id]);
+        return view('categories.update', ['category' => $category]);
     }
 }

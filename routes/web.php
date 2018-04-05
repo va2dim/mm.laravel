@@ -10,10 +10,8 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+//Route::setRoutes(new Illuminate\Routing\RouteCollection);
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 //Route::resource('/posts', 'PostController');
 
@@ -21,8 +19,8 @@ Route::get('/', function () {
 Route::post('/posts', 'PostController@store');
 
 Route::get('/posts/create', 'PostController@update');
-Route::get('/posts/{id}', 'PostController@show'); // Post info + comments on it
-Route::get('/posts/{id}/edit', 'PostController@update');
+Route::get('/posts/{post}', 'PostController@show'); // Post info + comments on it
+Route::get('/posts/{post}/edit', 'PostController@update');
 
 /*
 Route::resource('categories', 'CategoryController', ['except' => [

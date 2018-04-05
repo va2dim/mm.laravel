@@ -8,6 +8,9 @@ class Post extends Model
 {
     //public $name;
     //public $content;
+    protected $fillable = ['name', 'content', 'file'];
+    protected $hidden = ['category_id'];
+    public $timestamps = false;
 
     public function categories()
     {

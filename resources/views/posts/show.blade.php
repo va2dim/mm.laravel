@@ -11,6 +11,9 @@
         </span>
         </p>
         <div>{{ $post->content }}<br>
+            @if($post->file)
+                <img src="{{ asset('files/'.unserialize($post->file)) }}" height="100">
+            @endif
         </div>
     </div><!-- /.blog-post
 

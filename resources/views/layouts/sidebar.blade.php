@@ -5,18 +5,11 @@
                   aria-label="Статистика пользователей"></span>
             Статистика пользователей
         </h4>
-    </div>
-    <div class="sidebar-module sidebar-module-inset">
-        <h4>
-            <span class="oi oi-tags" title="Категории" aria-hidden="true" aria-label="Категории"></span>
-            Категории
-        </h4>
         <ol class="list-unstyled">
-            <!--
-            foreach($categories as $category)
-                <li><a href="/posts/categories/ category->id> category->name </a></li>
-            endforeach
-            -->
+            @foreach($statistic as $userStatistic)
+                <li>{{ $userStatistic->user_browser }} ({{ $userStatistic->user_browser_count }})</li>
+            @endforeach
+
         </ol>
     </div>
 </aside><!-- /.blog-sidebar -->

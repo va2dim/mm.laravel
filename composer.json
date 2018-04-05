@@ -4,12 +4,20 @@
     "keywords": ["framework", "laravel"],
     "license": "MIT",
     "type": "project",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/va2dim/laravel-like-comment"
+    }
+  ],
     "require": {
         "php": ">=7.0.0",
         "fideloper/proxy": "~3.3",
         "laravel/framework": "5.5.*",
         "laravel/tinker": "~1.0",
-        "risul/laravel-like-comment": "^2.0"
+      "risul/laravel-like-comment": "dev-noauth"
     },
     "require-dev": {
         "filp/whoops": "~2.0",

@@ -164,6 +164,7 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
 
+        risul\LaravelLikeComment\LikeCommentServiceProvider::class,
         /*
          * Package Service Providers...
          */

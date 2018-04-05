@@ -15,6 +15,9 @@
             <hr>
             Комментарии:
             {{ $category->comments }}
+            @foreach($category->comments as $comment)
+                @include('laravelLikeComment::comment', ['comment_item_id' => $category->id])
+            @endforeach
             <hr>
             <ul>Посты:
                 @foreach($category->posts as $categoryPost)

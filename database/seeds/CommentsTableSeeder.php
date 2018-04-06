@@ -12,13 +12,13 @@ class CommentsTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('comments')->truncate();
+        DB::table('laravellikecomment_comments')->truncate();
 
         $faker = Faker\Factory::create('ru_RU');
 
         $categoryIds = \App\Category::inRandomOrder()->pluck('id');
         foreach (range(0, $categoryIds) as $i) {
-            DB::table('comment')->insert(
+            DB::table('laravellikecomment_comments')->insert(
                 [
                     'user_id' => 1,
                     'author' => $faker->firstName().' '.$faker->lastName(),

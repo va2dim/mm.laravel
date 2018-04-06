@@ -13,7 +13,7 @@ class CategoriesTableSeeder extends Seeder
     public function run()
     {
         DB::table('categories')->truncate();
-        DB::table('comments')->truncate();
+        DB::table('laravellikecomment_comments')->truncate();
 
         $faker = Faker\Factory::create('ru_RU');
 
@@ -21,12 +21,11 @@ class CategoriesTableSeeder extends Seeder
             $category_id = DB::table('categories')->insertGetId(
                 [
                     'name' => $faker->unique()->word,
-                    'description' => $faker->sentence(50),
+                    'description' => $faker->realText(200),
                 ]
             );
 
-            $author = $faker->firstName.' '.$faker->lastName;
-            $content = $faker->sentence(15);
+            $comment = $faker->realText(100);
             $year = rand(2009, 2017);
             $month = rand(1, 12);
             $day = rand(1, 28);
@@ -34,12 +33,17 @@ class CategoriesTableSeeder extends Seeder
             $minute = rand(1, 60);
             $second = rand(1, 60);
             $dt = \Carbon\Carbon::create($year, $month, $day, $hour, $minute, $second);
-            DB::table('comments')->insert(
+
+            DB::table('laravellikecomment_comments')->insert(
                 [
-                    'category_id' => $category_id,
-                    'author' => $author,
-                    'content' => $content,
+                    'user_id' => 1,
+                    'author' => $faker->firstName.' '.$faker->lastName,
+                    'item_id' => $category_id,
+                    'parent_id' => 0,
+                    'comment' => $comment,
+                    'content' => $comment,
                     'created_at' => $dt,
+                    'updated_at' => $dt
                 ]
             );
 

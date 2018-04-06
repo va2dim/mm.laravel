@@ -20,7 +20,7 @@ class CreatePostsTable extends Migration
                 $table->bigInteger('category_id')->nullable();
                 $table->string('name')->unique();
                 $table->text('content');
-                $table->binary('file')->nullable();
+                $table->string('file')->nullable();
             }
         );
     }

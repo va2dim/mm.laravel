@@ -16,19 +16,18 @@ class PostsTableSeeder extends Seeder
 
         $faker = Faker\Factory::create('ru_RU');
         $categoryIds = \App\Category::all()->pluck('id')->toArray();
-
+        exec('mkdir '.public_path('files'));
         foreach (range(1, 12) as $index) {
             $post_id = DB::table('posts')->insertGetId(
                 [
                     'category_id' => array_rand($categoryIds),
                     'name' => $faker->unique()->realText(70),
-                    'content' => $faker->sentence(100),
-                    'file' => $faker->file('/resources/assets/files4seeding', '/public/files')
+                    'content' => $faker->realText(200),
+                    'file' => serialize($faker->file(public_path('files4seeding'), public_path('files'), false))
                 ]
             );
 
-            $author = $faker->firstName.' '.$faker->lastName;
-            $content = $faker->sentence(15);
+            $comment = $faker->realText(200);
             $year = rand(2009, 2017);
             $month = rand(1, 12);
             $day = rand(1, 28);
@@ -36,12 +35,17 @@ class PostsTableSeeder extends Seeder
             $minute = rand(1, 60);
             $second = rand(1, 60);
             $dt = \Carbon\Carbon::create($year, $month, $day, $hour, $minute, $second);
-            DB::table('comments')->insert(
+
+            DB::table('laravellikecomment_comments')->insert(
                 [
-                    'post_id' => $post_id,
-                    'author' => $author,
-                    'content' => $content,
+                    'user_id' => 1,
+                    'author' => $faker->firstName.' '.$faker->lastName,
+                    'item_id' => $post_id,
+                    'parent_id' => 0,
+                    'comment' => $comment,
+                    'content' => $comment,
                     'created_at' => $dt,
+                    'updated_at' => $dt
                 ]
             );
         }

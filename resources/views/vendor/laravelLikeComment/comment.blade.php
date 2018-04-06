@@ -5,21 +5,21 @@ $GLOBALS['commentDisabled'] = "";
 $GLOBALS['commentClass'] = -1;
 ?>
 <div class="laravelComment" id="laravelComment-{{ $comment_item_id }}">
-    <h3 class="ui dividing header">Comments</h3>ss
+    <h3 class="ui dividing header">Комментарии:</h3>
     <div class="ui threaded comments" id="{{ $comment_item_id }}-comment-0">
         <button class="ui basic small submit button" id="write-comment"
-                data-form="#{{ $comment_item_id }}-comment-form">Write comment
+                data-form="#{{ $comment_item_id }}-comment-form">Написать комментарий
         </button>
         <form class="ui laravelComment-form form" id="{{ $comment_item_id }}-comment-form" data-parent="0"
               data-item="{{ $comment_item_id }}" style="display: none;">
             <div class="field">
-                <input type="text" id="0-input" placeholder="Автор, по шаблону: <Фамилия> <Имя>"/>
+                <input type="text" id="0-input" pattern="^[A-ZА-ЯЁЇІЄҐ]{1}[A-Za-zА-Яа-яёЁЇїІіЄєҐґ]+\s+[A-ZА-ЯЁЇІЄҐ]{1}[A-Za-zА-Яа-яёЁЇїІіЄєҐґ]+$" placeholder="Автор, по шаблону: <Фамилия> <Имя>" />
                 <textarea id="0-textarea" rows="2" placeholder="Текст" {{ $GLOBALS['commentDisabled'] }}></textarea>
                 <!--if(!Auth::check())
-                    1<small>Please Log in to comment</small>1
+                    <small>Please Log in to comment</small>
                 endif-->
             </div>
-            <input type="submit" class="ui basic small submit button" value="Comment" {{ $GLOBALS['commentDisabled'] }}>
+            <input type="submit" class="ui basic small submit button" value="Комментировать" {{ $GLOBALS['commentDisabled'] }}>
         </form>
         <?php
         $GLOBALS['commentVisit'] = array();
@@ -34,7 +34,7 @@ $GLOBALS['commentClass'] = -1;
                 <img src="{{ $comment->avatar }}">
             </a>
             <div class="content">
-                <a class="author" url="{{ $comment->url or '' }}"> {{ $comment->name }} | {{ $comment->author }} </a>
+                <a class="author" url="{{ $comment->url or '' }}"> {{ $comment->name }}</a>
                 <div class="metadata">
                     <span class="date">{{ $comment->updated_at->diffForHumans() }}</span>
                 </div>
@@ -43,18 +43,18 @@ $GLOBALS['commentClass'] = -1;
                 </div>
                 <div class="actions">
                     <a class="{{ $GLOBALS['commentDisabled'] }} reply reply-button"
-                       data-toggle="{{ $comment->id }}-reply-form">Reply</a>
+                       data-toggle="{{ $comment->id }}-reply-form">Ответить</a>
                 </div>
                 {{ \risul\LaravelLikeComment\Controllers\CommentController::viewLike('comment-'.$comment->id) }}
                 <form id="{{ $comment->id }}-reply-form" class="ui laravelComment-form form"
                       data-parent="{{ $comment->id }}" data-item="{{ $comment->item_id }}" style="display: none;">
                     <div class="field">
-                        <input type="text" id="{{ $comment->id }}-input"
+                        <input type="text" id="{{ $comment->id }}-input" pattern="^[A-ZА-ЯЁЇІЄҐ]{1}[A-Za-zА-Яа-яёЁЇїІіЄєҐґ]+\s+[A-ZА-ЯЁЇІЄҐ]{1}[A-Za-zА-Яа-яёЁЇїІіЄєҐґ]+$"
                                placeholder="Автор, по шаблону: <Фамилия> <Имя>">
                         <textarea id="{{ $comment->id }}-textarea" rows="2"
                                   placeholder="Текст" {{ $GLOBALS['commentDisabled'] }}></textarea>
                         <!--if(!Auth::check())
-                            2<small>Please Log in to comment</small>2
+                            <small>Please Log in to comment</small>
                         endif-->
                     </div>
                     <input type="submit" class="ui basic small submit button"
@@ -81,6 +81,6 @@ $GLOBALS['commentClass'] = -1;
                 ?>
             </div>
             <button class="ui basic button" id="showComment" data-show-comment="0"
-                    data-item-id="{{ $comment_item_id }}">Show comments
+                    data-item-id="{{ $comment_item_id }}">Показать комментарии
             </button>
         </div>

@@ -16,10 +16,12 @@ class CreateLaravellikecommetCommentsTable extends Migration
             'laravellikecomment_comments',
             function (Blueprint $table) {
                 $table->increments('id');
-                $table->integer('user_id');//$table->string('author');
+                $table->integer('user_id');
+		$table->string('author');
                 $table->integer('parent_id');
                 $table->string('item_id'); // ModelName_modelId
-                $table->string('comment');//$table->string('content');
+                $table->string('comment');
+		$table->string('content');
                 $table->timestamps();
             }
         );

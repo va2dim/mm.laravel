@@ -8,6 +8,8 @@
         <span class="mr-auto">
             <a href="/posts/{{ $post->id }}/edit"><span class="oi oi-pencil" title="Редактировать" aria-hidden="true"
                                                         aria-label="Редактировать"></span></a>
+            <a href="/posts/{{ $post->id }}/delete"><span class="oi oi-delete" title="Удалить" aria-hidden="true"
+                                                        aria-label="Удалить"></span></a>
         </span>
         </p>
         <div>{{ $post->content }}<br>
@@ -15,8 +17,10 @@
                 <img src="{{ asset('files/'.unserialize($post->file)) }}" height="100">
             @endif
         </div>
-    </div><!-- /.blog-post
-
-    include('comments.create') -->
+        <div>
+            <br>
+                @include('laravelLikeComment::comment', ['comment_item_id' => $post->id])
+        </div>
+    </div>
 
 @endsection

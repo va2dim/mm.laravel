@@ -21,7 +21,6 @@ class CreatePostsTable extends Migration
                 $table->string('name')->unique();
                 $table->text('content');
                 $table->binary('file')->nullable();
-                //$table->timestamps();
             }
         );
     }

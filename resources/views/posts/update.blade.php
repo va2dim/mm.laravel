@@ -11,22 +11,21 @@
         пост</h1>
 
     <form action="/posts" method="post" enctype="multipart/form-data">
-    {{ csrf_field() }} <!-- Блокировка внешнего ввода данных/ не с этой стр. -->
+        {{ csrf_field() }}
         <fieldset>
 
         @include('layouts.errors')
 
-        <!-- <legend>Cоздать пост</legend> -->
             <div class="form-group">
-                <label for="id" class="col-lg-2 control-label">ID</label>
+                <label for="id" class="col-lg-2 hidden control-label">ID</label>
                 <div class="col-lg-10">
-                    <input class="form-control" readonly type="number" id="id" name="id" placeholder="ID поста"
+                    <input class="form-control" hidden readonly type="number" id="id" name="id" placeholder="ID поста"
                            value="{{ $post->id }}">
                 </div>
-                <label for="id" class="col-lg-2 control-label">Category ID</label>
-                <div class="col-lg-10">
-                    <input class="form-control" readonly type="number" id="categories_id" name="categories_id" placeholder="ID категории поста"
-                           value="{{ $post->categories_id }}">
+                <label for="id" class="col-lg-2 hidden control-label">Category ID</label>
+                <div class="col-lg-12">
+                    <input class="form-control" hidden readonly type="number" id="category_id" name="category_id" placeholder="ID категории поста"
+                           value="{{ $post->category_id }}">
                 </div>
 
                 <label for="title" class="col-lg-2 control-label">Заголовок</label>

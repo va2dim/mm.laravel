@@ -13,10 +13,11 @@
 
 
     <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/open-iconic-bootstrap.min.css">
+<!--    <link rel="stylesheet" href="/css/open-iconic-bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" integrity="sha256-BJ/G+e+y7bQdrYkS2RBTyNfBHpA9IuGaPmf9htub5MQ=" crossorigin="anonymous" />
 
     <!-- Custom styles for this template -->
-    <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="/css/_app.css">
 
     <link href="/css/icon.min.css" rel="stylesheet">
     <link href="/css/comment.min.css" rel="stylesheet">
@@ -47,13 +48,6 @@
     </div>
 </header>
 
-@if($flash = session('msg')) <!-- Flash message after successful registration of user, fileUpload -->
-<div class="alert alert-success" id="flash-msg" role="alert">
-    {{ $flash }}
-</div>
-@endif
-
-
 <div class="container">
 
     <div class="row">
@@ -66,8 +60,6 @@
     </div>
 </div>
 
-
-@include('layouts.footer')
 
 
 

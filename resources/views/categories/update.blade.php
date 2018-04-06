@@ -16,12 +16,11 @@
 
         @include('layouts.errors')
 
-        <!-- <legend>Cоздать категорию</legend> -->
             <div class="form-group">
 
-                <label for="id" class="col-lg-2 control-label">ID</label>
-                <div class="col-lg-10">
-                    <input class="form-control" readonly type="number" id="id" name="id" placeholder="ID категории"
+                <label for="id" class="col-lg-2 hidden control-label">ID</label>
+                <div class="col-lg-12">
+                    <input class="form-control" hidden readonly type="number" id="id" name="id" placeholder="ID категории"
                            value="{{ $category->id }}">
                 </div>
 

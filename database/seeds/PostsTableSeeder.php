@@ -12,13 +12,9 @@ class PostsTableSeeder extends Seeder
      */
     public function run()
     {
-        //\App\Post::truncate();
         DB::table('posts')->truncate();
 
-        $faker = Faker\Factory::create('en_EN');
-        //$name = $faker->realText(100);
-        //$content = $faker->sentence(100);
-        //$file = $faker->file('http://lorempixel.com/800/600/cats/', , false);
+        $faker = Faker\Factory::create('ru_RU');
         $categoryIds = \App\Category::all()->pluck('id')->toArray();
 
         foreach (range(1, 12) as $index) {
@@ -27,7 +23,7 @@ class PostsTableSeeder extends Seeder
                     'category_id' => array_rand($categoryIds),
                     'name' => $faker->unique()->realText(70),
                     'content' => $faker->sentence(100),
-                    //'file' => $faker->file('/resources/assets/files4seeding', '/resources/assets/uploadedFiles')
+                    'file' => $faker->file('/resources/assets/files4seeding', '/public/files')
                 ]
             );
 

@@ -3,16 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Post;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
-
-//use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
-    public function store()
+    public function store(Request $request)
     {
         $this->validate(
-            request(),
+            $request,
             [
                 'name' => 'required',
                 'content' => 'required',
@@ -20,68 +19,66 @@ class PostController extends Controller
             ]
         );
 
+        if ($request->hasFile('file')) {
+            $file = $request->file('file');
 
-        //TODO Если первый файл прошел валидацию обновить модель
-        if (request()->hasFile('file')) {
-            $file = request()->file('file');
+            if (isSet($request->id)) {
+                if ($oldFile = Post::find($request->id)->file) {
+                    $oldFile = unserialize($oldFile);
 
-            if ($oldFile = Post::find(request('id'))->file) {
-                $oldFile = unserialize($oldFile);
-
-                if (file_exists(public_path('files/'.$oldFile))) {
-                    unlink(public_path('files/'.$oldFile)); // При upload устанавливается simlink?
-                    //dd('files/'.$oldFile);
-                    Storage::delete(
-                        public_path('files/'.$oldFile)
-                    ); // TODO не отрабатывает удаление файла, удалить сразу массив imgs, это же добавить в удаление поста
+                    if (file_exists(public_path('files/'.$oldFile))) {
+                        unlink(public_path('files/'.$oldFile));
+                        Storage::delete(
+                            public_path('files/'.$oldFile)
+                        );
+                    }
                 }
             }
 
-                $file_name = $file->getClientOriginalName();
-                $file_name = substr($file_name, 0, strpos($file_name, '.', -4));
-                $uploadedFile = time().'_'.$file_name.'.'.$file->extension();
-                $file->move(public_path('files/'), $uploadedFile);
-
-            //session()->flash('msg', 'Файлы '.implode(', ', $images).' были успешно загружены');
-
+            $file_name = $file->getClientOriginalName();
+            $file_name = substr($file_name, 0, strpos($file_name, '.', -4));
+            $uploadedFile = time().'_'.$file_name.'.'.$file->extension();
+            $file->move(public_path('files/'), $uploadedFile);
         } else {
             $uploadedFile = null;
         }
 
-        //dd(($uploadedFile) ? serialize($uploadedFile) : null );
-
-        Post::updateOrCreate(
+        $post = Post::updateOrCreate(
             [
-                'id' => request('id'),
+                'id' => $request->id
             ],
             [
-                'name' => request('name'),
-                'content' => request('content'),
-                'file' => ($uploadedFile) ? serialize($uploadedFile) : null,
-                //'file' => request('file'),
+                'name' => $request->name,
+                'category_id' => $request->category_id,
+                'content' => $request->content,
+                'file' => ($uploadedFile) ? serialize($uploadedFile) : null
             ]
         );
 
-        return redirect('/posts/'.request('id'));
+        return redirect('/posts/'.$post->id);
     }
 
     public function show(Post $post)
     {
-        //$post = Post::where('id', $id)->first();
-        //$postCategories = $post->categories();
-        //$postComments = $post->getComments();
 
         return view('posts.show', ['post' => $post]);
     }
 
-    public function update(Post $post)
+    public function update(Post $post, $category = null)
     {
-        //dd($post);
-
-//        $post = Post::where('id', $id)->first();
         $postCategories = $post->categories();
+        if (!isSet($post->category_id) && !empty($category)) {
+            $post->category_id = $category;
+        }
+
         return view('posts.update', ['post' => $post]);
     }
 
 
+    public function destroy(Post $post)
+    {
+        Post::destroy($post->id);
+
+        return redirect()->back();
+    }
 }

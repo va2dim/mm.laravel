@@ -9,48 +9,48 @@ class CategoryController extends Controller
 {
     public function index()
     {
-        $categories = Category::paginate(7);
+        $categories = Category::paginate(10);
 
         return view('categories.index', compact('categories'));
     }
 
-    //TODO Смотри метод пост в роутинге
     public function store(Request $request)
     {
         $this->validate(
-            request(),
+            $request,
             [
                 'name' => 'required',
                 'description' => 'required',
             ]
         );
 
-        Category::updateOrCreate([
-                'id' => request('id')
+        $category = Category::updateOrCreate([
+                'id' => $request->id
             ], [
-                'name' => request('name'),
-                'description' => request('description'),
+                'name' => $request->name,
+                'description' => $request->description,
         ]);
 
-        $this->index();
+        return redirect('categories/'.$category->id);
+
     }
 
     public function show(Category $category)
     {
-        //echo $id->comments;
-        /*$category = Category::where('id', $id)->first();
-         $categoryComments = $category->getComments();
- */
 
-        //return view('categories.show', compact('category', 'categoryComments'));
         return view('categories.show', ['category' => $category]);
     }
 
     public function update(Category $category)
     {
 
-        //$category = Category::where('id', $id)->first();
-
         return view('categories.update', ['category' => $category]);
+    }
+
+    public function destroy(Category $category)
+    {
+        Category::destroy($category->id);
+
+        return redirect('categories/');
     }
 }

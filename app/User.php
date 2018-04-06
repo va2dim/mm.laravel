@@ -35,7 +35,6 @@ class User extends Authenticatable
     {
         $user = self::find($id);
 
-//dd($user);
         return [
             'id' => $user->id,
             'name' => $user->name,
@@ -45,7 +44,6 @@ class User extends Authenticatable
             'admin' => $user->role === 'admin', // bool
         ];
     }
-
 
     public static function getUserAgents()
     {

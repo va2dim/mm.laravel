@@ -12,13 +12,10 @@ class CategoriesTableSeeder extends Seeder
      */
     public function run()
     {
-        //\App\Post::truncate();
         DB::table('categories')->truncate();
         DB::table('comments')->truncate();
 
-        $faker = Faker\Factory::create('en_EN');
-        //$name = $faker->realText(100);
-        //$description = $faker->sentence(50);
+        $faker = Faker\Factory::create('ru_RU');
 
         foreach (range(1, 10) as $index) {
             $category_id = DB::table('categories')->insertGetId(
